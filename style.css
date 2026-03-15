@@ -28,7 +28,7 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   font-family: var(--font-sans);
   background: radial-gradient(circle at top, #111827, #020617 55%, #000 100%);
@@ -38,7 +38,7 @@ body {
 .page {
   width: 100%;
   max-width: 960px;
-  padding: 24px;
+  padding: 16px 20px 12px;
 }
 
 .title {
@@ -56,7 +56,7 @@ body {
 .game-layout {
   display: grid;
   grid-template-columns: minmax(260px, auto) minmax(220px, 1fr);
-  gap: 24px;
+  gap: 20px;
   align-items: flex-start;
 }
 
@@ -158,7 +158,7 @@ canvas {
 }
 
 .touch-controls {
-  margin-top: 18px;
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -211,25 +211,40 @@ canvas {
 
 @media (max-width: 768px) {
   .page {
-    padding: 16px;
+    padding: 10px 10px 8px;
   }
 
   .game-layout {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .right-panel {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   .info-card {
     flex: 1 1 140px;
+    padding: 10px 10px;
   }
 
   #board {
     width: 100%;
+    max-width: 210px;
     height: auto;
+  }
+
+  .touch-controls {
+    margin-top: 10px;
+  }
+
+  .touch-btn {
+    min-width: 46px;
+    min-height: 46px;
+    font-size: 14px;
+    padding: 4px 10px;
   }
 }
 
