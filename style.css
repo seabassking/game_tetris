@@ -216,35 +216,29 @@ canvas {
 
   .game-layout {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 8px;
+    justify-items: center;
   }
 
   .right-panel {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .info-card {
-    flex: 1 1 140px;
-    padding: 10px 10px;
+    display: none;
   }
 
   #board {
-    width: 100%;
-    max-width: 210px;
+    width: 80vw;
+    max-width: 180px;
     height: auto;
   }
 
   .touch-controls {
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .touch-btn {
-    min-width: 46px;
-    min-height: 46px;
-    font-size: 14px;
-    padding: 4px 10px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 13px;
+    padding: 4px 8px;
   }
 }
 
