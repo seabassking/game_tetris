@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>웹 테트리스</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <h1 class="title">웹 테트리스</h1>
+      <div class="game-layout">
+        <div class="left-panel">
+          <canvas id="board" width="240" height="480"></canvas>
+        </div>
+        <div class="right-panel">
+          <div class="info-card">
+            <h2>정보</h2>
+            <p><span class="label">점수</span> <span id="score">0</span></p>
+            <p><span class="label">레벨</span> <span id="level">1</span></p>
+            <p><span class="label">지운 줄</span> <span id="lines">0</span></p>
+          </div>
+
+          <div class="info-card">
+            <h2>다음 블록</h2>
+            <canvas id="next" width="120" height="120"></canvas>
+          </div>
+
+          <div class="info-card">
+            <h2>조작법</h2>
+            <ul class="control-list">
+              <li><b>← →</b> 좌우 이동</li>
+              <li><b>↑</b> 회전</li>
+              <li><b>↓</b> 빠르게 내리기</li>
+              <li><b>Space</b> 즉시 떨어뜨리기</li>
+              <li><b>P</b> 일시정지 / 재개</li>
+            </ul>
+          </div>
+
+          <button id="startBtn" class="primary-btn">게임 시작 / 재시작</button>
+          <p id="statusText" class="status-text">시작하려면 버튼을 누르세요.</p>
+        </div>
+      </div>
+
+      <div class="touch-controls" aria-label="터치 조작 버튼">
+        <div class="touch-row">
+          <button id="btnRotate" class="touch-btn touch-btn-main">회전</button>
+          <button id="btnDrop" class="touch-btn touch-btn-main">드롭</button>
+        </div>
+        <div class="touch-row">
+          <button id="btnLeft" class="touch-btn">←</button>
+          <button id="btnDown" class="touch-btn">↓</button>
+          <button id="btnRight" class="touch-btn">→</button>
+        </div>
+        <div class="touch-row touch-row-small">
+          <button id="btnPause" class="touch-btn touch-btn-secondary">일시정지</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
